@@ -261,7 +261,7 @@ Let's implement our refactor:
 
 ```ruby
 def checkout
-  total = shopping_cart.sum
+  total = shopping_cart.sum { |item| item.price }
 
   ...
 end
